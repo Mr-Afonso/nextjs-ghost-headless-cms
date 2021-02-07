@@ -10,10 +10,12 @@ type Post = {
 
 async function getPosts() {
 	// curl ""
-	const res = await fetch(`${BLOG_URL}/ghost/api/v3/content/posts/?key=${CONTENT_API_KEY}&fields=title,slug,custom_excerpt`
+	const res = await fetch(
+		`${BLOG_URL}/ghost/api/v3/content/posts/?key=${CONTENT_API_KEY}&fields=title,slug,custom_excerpt`
 	).then((res) => res.json())
 
 	const posts = res.posts
+
 	return posts
 }
 
@@ -26,9 +28,9 @@ export const getStaticProps = async ({ params }) => {
 }
 
 const Home: React.FC<{ posts: Post[] }> = (props) => {
-  const { posts } = props
+	const { posts } = props
 
-  return (
+	return (
 		<div className={styles.container}>
 			<h1>Hello to my blog</h1>
 			<ul>
@@ -43,7 +45,7 @@ const Home: React.FC<{ posts: Post[] }> = (props) => {
 				})}
 			</ul>
 		</div>
-  )
+	)
 }
 
 export default Home
