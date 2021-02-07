@@ -17,3 +17,4 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 ## Changes
 
 Please make sure to update your Ghost API keys and your blog URL according to where you have deployed your Ghost CMS. You can watch the [building and deployment process here](https://www.youtube.com/watch?v=1SYU1GorO6Y)
+
